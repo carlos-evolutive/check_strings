@@ -1,0 +1,17 @@
+#/bin/bash
+
+
+if [[ $# > 0 ]] ; then
+PATH_ORIGIN="$1"
+else
+PATH_ORIGIN='.'
+fi
+
+FILE_LIST=$(find "$PATH_ORIGIN" -name *.strings)
+
+while read -r FILE_PATH; do
+     (plutil -lint "$FILE_PATH")
+done <<< "$FILE_LIST"
+
+
+

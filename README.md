@@ -3,5 +3,6 @@ A simple command line script to check XCode strings files integrity that can che
 
 usage: check_strings "PATH"
 
-Note: The problematic file is usually the one following the error message.
-      Use open "FILE_PATH" to quickly fix the problematic file.
+Note: The problematic file is usually the one following the error message "CFPropertyListCreateFromXMLData() ...".
+
+      Use `open "FILE_PATH"` to quickly fix the problematic file.
